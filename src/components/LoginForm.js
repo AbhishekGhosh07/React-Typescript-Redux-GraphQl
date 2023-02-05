@@ -5,18 +5,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const LoginForm = (props) => {
   console.log("LOGIN FORM PAGE" ,props.cred);
   const [cred,setCred] = useState({
-    usename:" ",
+    username:" ",
     password:" "
   })
 
   
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(`Username: ${cred.username}`);
-    console.log(`Password: ${cred.password}`);
-    
-  };
+  
   const handleChange =(e)=>{
       e.preventDefault();
       let {name,value} = e.target;
@@ -48,9 +43,9 @@ const LoginForm = (props) => {
                 onChange={handleChange}
               />
             </Form.Group>
-            <Button variant="primary" onClick={()=>props.addToUsernameHandler({username:"abhi",password:"ghosh"})}>
-              Submit
-            </Button>
+            <button onClick={()=>props.addToUsernameHandler({name:"iphone 13"})}>Submit</button>
+              
+            
           </Form>
         </Col>
       </Row>

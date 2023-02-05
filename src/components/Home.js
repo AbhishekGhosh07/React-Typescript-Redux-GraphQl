@@ -1,8 +1,11 @@
-import React from 'react'
+import {useState} from 'react';
 function Home(props){
    console.log("Home",props.cart);
    console.log("Home Order",props.order);
+   const[price,setPrice] = useState(1000);
+   const[name,setName] = useState("iphone 14");
     return(<>
+        
         <center>
         <div><h1>Home Component</h1>
         
@@ -19,7 +22,7 @@ function Home(props){
                     </span>
                 </div>
                 <div className="btn-wrapper item">
-                    <button onClick={()=>props.addToCartHandler({price:1000,name:"iphone 12"})}>Add To Cart</button>
+                    <button onClick={()=>props.addToCartHandler({price,name})}>Add To Cart</button>
                     <button onClick={()=>props.removeToCartHandler()}>Remove To Cart</button>
                     <button onClick={()=>props.addToOrderHandler({name:"iphone 13"})}>Order</button>
                     <button onClick={()=>props.removeToOrderHandler()}>Cancel</button>
