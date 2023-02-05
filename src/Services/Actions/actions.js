@@ -1,4 +1,12 @@
-import { ADD_TO_CART,REMOVE_TO_CART,ADD_TO_ORDER,REMOVE_TO_ORDER } from "../constants"
+import { ADD_TO_CART,REMOVE_TO_CART,ADD_TO_ORDER,REMOVE_TO_ORDER,ADD_USERNAME } from "../constants"
+export const addUsername=(data)=>{
+    console.log("action username",data);
+    return{
+        type:ADD_USERNAME,
+        data:data
+    }
+}
+
 
 export const addToCart=(data)=>{
     console.log("action",data);

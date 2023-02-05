@@ -1,4 +1,20 @@
-import {ADD_TO_CART,REMOVE_TO_CART,ADD_TO_ORDER,REMOVE_TO_ORDER} from '../constants'
+import {ADD_TO_CART,REMOVE_TO_CART,ADD_TO_ORDER,REMOVE_TO_ORDER,ADD_USERNAME} from '../constants'
+
+export function credentials(state=[],action){
+    switch(action.type){
+        case ADD_USERNAME:
+            console.log("Reducers username",action);
+            return [
+                ...state,
+                {credentials:action.data}
+
+            ]
+        default: 
+           return state 
+    }
+}
+
+
 
 export  function orderDetails(state=[],action){
     switch(action.type){
