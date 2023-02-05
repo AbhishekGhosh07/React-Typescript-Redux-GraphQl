@@ -1,15 +1,24 @@
 import React, { useState } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'
-const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+const Login = (props) => {
+    const [idPass,setIdPass]=useState({
+        username:"",
+        password:""
+    })
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`Username: ${username}`);
-    console.log(`Password: ${password}`);
+    props.addUserHandler({idPass});
   };
+  console.log("login",props.user);
+const handleChange=(e)=>{
+    e.preventDefault();
+    let {name,value}=e.target;
+    setIdPass({...idPass,[name]:value});
+
+
+}
 
   return (
     <Container>
@@ -21,20 +30,22 @@ const Login = () => {
               <Form.Control
                 type="text"
                 placeholder="Enter username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                name="username"
+                value={idPass.username}
+                onChange={handleChange}
               />
             </Form.Group>
             <Form.Group controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
               <Form.Control
                 type="password"
+                name="password"
                 placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={idPass.password}
+                onChange={handleChange}
               />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" >
               Submit
             </Button>
           </Form>

@@ -1,11 +1,13 @@
 import {ADD_TO_CART,REMOVE_TO_CART,ADD_TO_ORDER,REMOVE_TO_ORDER,ADD_USERNAME} from '../constants'
 
 export function cred(state=[],action){
+    console.log("ACTION USER",action.data);
     switch(action.type){
+            
         case ADD_USERNAME:
             return[
                 ...state,
-                {username:action.data}
+                {users:action.data}
             ]
         default:
             return state 

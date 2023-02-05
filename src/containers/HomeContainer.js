@@ -5,7 +5,8 @@ import {addToCart,removeToCart,addToOrder,removeToOrder} from '../Services/Actio
 const mapStateToProps=(state)=>({
     
     order:state.orderDetails,
-    cart:state.cardItems
+    cart:state.cardItems,
+    
 
     
     

@@ -30,6 +30,7 @@ function Home(props){
             </div>
         
         </div>
+
         </center>
         </>
     )
