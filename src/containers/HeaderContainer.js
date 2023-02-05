@@ -4,7 +4,7 @@ import Header from '../components/Header'
 const mapStateToProps=state=>({
     cart:state.cardItems,
     order:state.orderDetails,
-    credentials:state.credentials
+    user:state.cred
     
 })
 

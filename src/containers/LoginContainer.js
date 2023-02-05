@@ -1,17 +1,12 @@
-import {connect} from 'react-redux'
-import LoginForm from '../components/LoginForm'
-import {addUsername} from '../Services/Actions/actions'
+import {connect} from 'react-redux';
+import Login from '../components/Login'
+import { addUser } from '../Services/Actions/actions';
 
 const mapStateToProps=(state)=>({
-    
-    cred:state.credentials
-    })
-
+     user:state.cred,
+})
 const mapDispatchToProps=dispatch=>({
-    
-    addToUsernameHandler:data=>{
-        console.log("Dispatched")
-        dispatch(addUsername(data))},
-    })
+    addUserHandler:data=>dispatch(addUser(data)),
+})
 
-export default connect(mapStateToProps,mapDispatchToProps)(LoginForm)
+export default connect(mapStateToProps,mapDispatchToProps)(Login)
