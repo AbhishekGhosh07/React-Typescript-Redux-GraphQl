@@ -6,7 +6,7 @@ const mapStateToProps=(state)=>({
     
     order:state.orderDetails,
     cart:state.cardItems,
-    
+    user:state.cred,
 
     
     

@@ -1,12 +1,14 @@
 import {useState} from 'react';
+import HeaderContainer from '../containers/HeaderContainer';
 function Home(props){
    console.log("Home",props.cart);
    console.log("Home Order",props.order);
    const[price,setPrice] = useState(1000);
    const[name,setName] = useState("iphone 14");
     return(<>
-        
+        <HeaderContainer/>
         <center>
+        <center><h2>Welcome {props.user[0].users.username}</h2></center>
         <div><h1>Shopping Cart</h1>
         
         <div className="cart-wrapper">

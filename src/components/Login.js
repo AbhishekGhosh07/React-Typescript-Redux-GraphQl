@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import {  useNavigate } from "react-router-dom";
 const Login = (props) => {
+    let navigate = useNavigate();
     const [idPass,setIdPass]=useState({
         username:"",
         password:""
@@ -10,6 +12,7 @@ const Login = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.addUserHandler(idPass);
+    navigate('/home');
   };
   console.log("login",props.user);
 const handleChange=(e)=>{
