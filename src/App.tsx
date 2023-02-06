@@ -4,6 +4,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import HomeContainer from './containers/HomeContainer';
 import LoginContainer from './containers/LoginContainer';
 import HeaderContainer from './containers/HeaderContainer';
+import MyNavbar from './components/MyNavbar';
 function App(){
   
 return(<>
@@ -11,9 +12,10 @@ return(<>
     {/* <ControlContainer/> */}
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<HeaderContainer/>}/>
+      <Route path="/" element={<MyNavbar/>}>
       <Route path="/login" element={<LoginContainer/>}/>
       <Route path="/home" element={<HomeContainer/>}/>
+      </Route>
       
       
 
