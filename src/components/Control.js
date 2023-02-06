@@ -6,7 +6,7 @@ function Control(props){
   console.log("Control",props);
     return(<>
         <div>
-          {(props.user.length == 0)?<LoginContainer/>:null}
+          {(props.user.length === 0)?<LoginContainer/>:null}
           
           {(props.user.length > 0)?<><HeaderContainer/>
           <HomeContainer/>
