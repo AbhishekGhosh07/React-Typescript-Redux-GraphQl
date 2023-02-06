@@ -11,7 +11,7 @@ export function cred(state=[],action){
             ]
         default:
             return state 
-        }
+        } 
 }
 
 export  function orderDetails(state=[],action){

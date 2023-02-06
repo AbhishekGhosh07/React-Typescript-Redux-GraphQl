@@ -9,7 +9,7 @@ const Login = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.addUserHandler({idPass});
+    props.addUserHandler(idPass);
   };
   console.log("login",props.user);
 const handleChange=(e)=>{
