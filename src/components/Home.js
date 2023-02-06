@@ -8,7 +8,12 @@ function Home(props){
     return(<>
         <HeaderContainer/>
         <center>
-        <center><h2>Welcome {props.user[0].users.username}</h2></center>
+        {
+            (props.user.length===0)?null:<center><h2>Welcome {props.user[0].users.username}</h2></center>
+        }
+
+
+        
         <div><h1>Shopping Cart</h1>
         
         <div className="cart-wrapper">
