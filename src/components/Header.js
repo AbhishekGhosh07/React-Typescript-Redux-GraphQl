@@ -10,8 +10,8 @@ function Header(props){
 
      (props.user.length > 0)?<><h4>No. of Items in Cart  --{props.cart.length}</h4>
      <h4>No. of Items in orders--{props.order.length}</h4>
+     <center><h2>Welcome {props.user[0].users.username}</h2></center>
      
-     <h4>Username--{props.user[0].users.username}</h4>
 
      </>
      :null

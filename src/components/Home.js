@@ -7,7 +7,7 @@ function Home(props){
     return(<>
         
         <center>
-        <div><h1>Home Component</h1>
+        <div><h1>Shopping Cart</h1>
         
         <div className="cart-wrapper">
                 <div className="img-wrapper item">
