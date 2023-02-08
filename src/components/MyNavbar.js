@@ -6,7 +6,7 @@ const MyNavbar = (props) => {
   console.log("Nabar",props.user);
   return (<>
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="/">EKART</Navbar.Brand>
+      <Navbar.Brand href="/">CV</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
